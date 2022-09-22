@@ -1,5 +1,5 @@
 // importamos el modelo de User
-const User = require("../models/USERS");
+const User = require("../src/models/users");
 // iniciamos el controlador user como object
 const CtrlUser = {};
 

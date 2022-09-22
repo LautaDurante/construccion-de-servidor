@@ -1,5 +1,5 @@
 // Importamos el modelo
-const TaskModel = require('../models/TASKS');
+const TaskModel = require('../src/models/tasks');
 
 // Inicializamos el objeto CtrlTask
 const ctrlTask = {};
