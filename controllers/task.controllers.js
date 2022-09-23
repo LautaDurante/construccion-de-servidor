@@ -47,11 +47,17 @@ ctrlTask.putTask = async (req, res) => {
 }
 
 ctrlTask.deleteTask = async (req, res) => {
-    return res.json(
-        {
-            message: "Tarea eliminada.",
-        }
-    )
+    const id = req.params.IdTarea;
+    try {
+     await TaskModel.findByIdAndUpdate(id, {isActive:false});
+
+     
+    } catch (err) {
+      console.log(err.message)
+      return res.status(500).json({
+        msg: 'Internal Server Error' 
+     })
+    }
 };
 
 // Exportamos el controlador

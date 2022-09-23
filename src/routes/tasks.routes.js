@@ -10,8 +10,8 @@ router.get('/task', getTasks);
 
 router.post('/task', postTask);
 
-router.put('/task', putTask);
+router.put('/task/:IdTarea', putTask);
 
-router.delete('/task', deleteTask)
+router.delete('/task/:IdTarea', deleteTask)
 
 module.exports = router
