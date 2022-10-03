@@ -39,6 +39,7 @@ ctrlTask.postTask = async (req, res) => {
 };
 
 ctrlTask.putTask = async (req, res) => {
+    const id = req.params.IdTask
     return res.json(
         {
             message: "REQ PUT",
@@ -54,7 +55,7 @@ ctrlTask.deleteTask = async (req, res) => {
      
     } catch (err) {
       console.log(err.message)
-      return res.status(500).json({
+      return res.status(500).json({ 
         msg: 'Internal Server Error' 
      })
     }
